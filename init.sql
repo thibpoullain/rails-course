@@ -1,0 +1,5 @@
+CREATE USER epitech WITH PASSWORD 'epitech' CREATEDB;
+CREATE DATABASE epitech_dev;
+CREATE DATABASE epitech_test;
+GRANT ALL PRIVILEGES ON DATABASE epitech_dev TO epitech;
+GRANT ALL PRIVILEGES ON DATABASE epitech_test TO epitech;
