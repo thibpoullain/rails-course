@@ -11,6 +11,14 @@ module RailsCourse
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    # desactivate spec generator
+    config.generators do |g|
+      g.view_specs false
+      g.helper_specs false
+      g.routing_specs false
+      g.controller_specs false
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
