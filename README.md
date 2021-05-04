@@ -66,19 +66,24 @@ avec les alias :
 2 - Création des posts (ensemble)
 ----------------------------
 
-1 - Utiliser le générateur "scaffold" pour générer les posts
+- Utiliser le générateur "scaffold" pour générer les posts
 
 Ces derniers devront avoir les attributs suivants : titre (string), description (text), publié (boolean),  publié le (datetime), auteur (references)
+
+- Appliquer les migrations à la base de donnée
+
+- Ajouter Bootstrap (https://github.com/twbs/bootstrap-rubygem)
+
 
 
 
 3 - Installation de devise
 ----------------------------
 
-1 - Installez la gem bcrypt (déjà présente dans le gemfile, la décommenter)
-2 - Installer la gem devise et installez là en suivant la documentation
+- Installez la gem bcrypt (déjà présente dans le gemfile, la décommenter)
+- Installer la gem devise et installez là en suivant la documentation
     https://github.com/heartcombo/devise#starting-with-rails
-3 - Générez les vues de devise
+- Générez les vues de devise
     https://github.com/heartcombo/devise#configuring-views
-4 - utilisez un générateur pour créer le controller Home avec la méthode index
+- utilisez un générateur pour créer le controller Home avec la méthode index
 
