@@ -13,6 +13,8 @@ services:
       - postgres
     environment:
       RAILS_ENV: development
+    tty: true
+    stdin_open: true
 
   postgres:
     image: postgres:13-alpine
