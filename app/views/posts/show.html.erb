@@ -20,7 +20,5 @@
   <%= @post.published_at %>
 </p>
 
-<div class='mt-5'>
-  <%= link_to 'Editer', edit_post_path(@post), class: 'btn btn-info'%>
-  <%= link_to 'Retour', posts_path, class: 'btn btn-info'%>
-</div>
+
+<%= render partial: 'navigator', locals: { action_name: 'Editer', action: edit_post_path(@post) } %>
