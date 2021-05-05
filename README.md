@@ -68,13 +68,47 @@ avec les alias :
 
 - Utiliser le générateur "scaffold" pour générer les posts
 
-Ces derniers devront avoir les attributs suivants : titre (string), description (text), publié (boolean),  publié le (datetime), auteur (references)
+Ces derniers devront avoir les attributs suivants : titre (string), description (text), publié (boolean),  publié le (datetime)
 
 - Appliquer les migrations à la base de donnée
 
-- Ajouter Bootstrap (https://github.com/twbs/bootstrap-rubygem)
+- Ajouter des seeds
 
+- Ajouter Bootstrap (https://github.com/twbs/bootstrap-rubygem) n'oubliez pas de redémarrer le server.
 
+- Modifier le fichier app/views/posts/index.html.erb comme suit :
+
+```
+<h4 class='d-flex justify-content-between'>
+  <span>Post</span>
+   [mettre ici un link_to vers l'url de création de post, avec la class 'btn btn-primary']
+</h4>
+
+[boucle sur les posts]
+ [link_to vers l'édition du post avec un block qui contient le code suivant]
+    <div class='card mb-3'>
+      <div class='card-body mb-1'>
+        <h5 class='card-title text-dark'>
+        [afficher le titre du post]
+        </h5>
+        <p class='text-secondary mb-0'>
+         [afficher la description du post]
+         </p>
+      </div>
+    </div>
+```
+
+- Modifiez le layout application comme suit :
+
+```
+ <body class='bg-light'>
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    <div>
+ </body>
+```
 
 
 3 - Installation de devise
