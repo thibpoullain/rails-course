@@ -110,6 +110,10 @@ Ces derniers devront avoir les attributs suivants : titre (string), description 
  </body>
 ```
 
+- Installer la gem simple_fom (avec l'option pour prendre en charge bootstrap)
+
+Profitez en pour homogénéiser toutes les pages (show, edit, index...)
+
 
 3 - Installation de devise
 ----------------------------
