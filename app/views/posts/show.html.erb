@@ -20,5 +20,6 @@
   <%= @post.published_at %>
 </p>
 
+<%= link_to 'Supprimer', @post, method: :delete, class: 'btn btn-danger' %>
 
 <%= render partial: 'navigator', locals: { action_name: 'Editer', action: edit_post_path(@post) } %>
