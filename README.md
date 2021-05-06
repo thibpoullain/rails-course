@@ -123,5 +123,26 @@ Profitez en pour homogénéiser toutes les pages (show, edit, index...)
     https://github.com/heartcombo/devise#starting-with-rails
 - Générez les vues de devise
     https://github.com/heartcombo/devise#configuring-views
-- utilisez un générateur pour créer le controller Home avec la méthode index
+- Faire en sorte que les posts affichés ne soit accessibles que par un auteur connecté
+Il faudra créer un controlleur Authors, utilise un callback de devise (:authenticate_author!) à l'intérieur, et faire hériter le controlleur post de ce dernier.
+- Modifier les vues pour qu'elles correspondent à la relation entre les controlleurs pour respecter la logique de rails (et accéssoirement, que ça marche ;) )
+- Créer la reation entre le modèle auteur et le modèle post (https://guides.rubyonrails.org/association_basics.html)
+- Générer une migration qui utilise add_reference pour ajouter la clé étrangère
+
+4 - Challenge final ! Les catégories des posts !
+------------------------------
+
+L'objectif est de créer des catégories pour les articles du blog, et de pouvoir les afficher sur ce dernier.
+
+Pour cela vous aurez besoin de tout ce que nous avons appris ensemble précédement !
+
+- ajouter un nouvel attribut à post en créant une nouvelle migration
+
+- Faire des validations pour qu'il ne puisse y avoir que certaines catégories de disponibles
+
+- Modifier le controlleur des posts pour qu'il accepte ce nouvel attribut
+
+- Modifier les seeds pour qu'ils créer des catégories pour chaque post
+
+- Modifier la vue des posts pour faire apparaitre les catégories, dans le show, dans l'index, dans l'édit, l'update...
 
