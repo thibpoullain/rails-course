@@ -1,6 +1,16 @@
-10.times do |i|
-  Post.create(titre: "Post numéro #{i}",
-              description: "Description bidon numéro #{i}",
-              published: false,
-              published_at: rand(1..10).days.ago)
+Author.destroy_all
+Post.destroy_all
+
+3.times do |i|
+  Author.create(email: "author#{i}@test.com", password: 'Azertyuiop')
+end
+
+Author.all.each do |author|
+  10.times do
+    Post.create(titre: "Post du turfu",
+                description: "Description que je lirai pas de toute façon j'ai piscine",
+                published: false,
+                published_at: rand(1..10).days.ago,
+                author: author)
+  end
 end
