@@ -11,6 +11,7 @@ Author.all.each do |author|
                 description: "Description que je lirai pas de toute façon j'ai piscine",
                 published: false,
                 published_at: rand(1..10).days.ago,
-                author: author)
+                author: author,
+                categories: %w(dev ops tech business game).sample)
   end
 end
