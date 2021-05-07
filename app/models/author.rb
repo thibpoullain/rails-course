@@ -5,4 +5,7 @@ class Author < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts, dependent: :destroy
+
+  validates :email, presence: true, uniqueness: { case_sensitive: false }
+
 end
