@@ -25,7 +25,7 @@
         <ul class="navbar-nav">
           <% if author_signed_in? %>
             <li class="nav-item">
-              <%= link_to 'Déconnection', destroy_author_session_path, class: 'nav-link'%>
+              <%= link_to 'Déconnection', destroy_author_session_path, method: :delete, class: 'nav-link'%>
             </li>
           <% else %>
             <li class="nav-item">
@@ -36,9 +36,15 @@
       </div>
     </nav>
     <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
+      <% if notice %>
+        <p class="notice alert alert-info mt-5"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert alert-danger mt-5"><%= alert %></p>
+      <% end %>
+      <div class='mt-5'>
+        <%= yield %>
+      </div>
     <div>
   </body>
 </html>
