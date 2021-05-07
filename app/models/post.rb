@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 
   validates :titre, presence: true
   validates :description, presence: true
-  validates :published, presence: true
+  validates :published, exclusion: [nil]
   validates :published_at, presence: true
   validates :author, presence: true
 
