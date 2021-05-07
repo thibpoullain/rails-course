@@ -10,7 +10,12 @@
         <h5 class='card-title text-dark'>
         <%= post.titre %>
         </h5>
-        <p class='text-secondary mb-0'><%= post.description %></p>
+        <p class='text-dark mb-0'>
+          <%= post.published_decorated %>
+        </p>
+        <p class='text-secondary mt-3'>
+          <%= post.description %>
+        </p>
       </div>
     </div>
   <%end%>

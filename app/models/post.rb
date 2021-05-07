@@ -10,4 +10,8 @@ class Post < ApplicationRecord
   validates :categories, inclusion: { in: %w(dev ops tech business game),
                                       message: "%{value} is not a valid categorie" }
 
+  def published_decorated
+    published ? "Publié le #{published_at}" : 'Non publié'
+  end
+
 end
